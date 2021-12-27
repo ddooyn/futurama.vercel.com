@@ -13,7 +13,7 @@ export const QuestionCard = ( { questionData }: QuestionCardProps) => {
             <h2>{id}</h2>
             <Question>{question}</Question>
             {possibleAnswers.map((value,index) => {
-                return <AnswerList>{index + 1}. {value}</AnswerList>;
+                return <AnswerList key={index}>{index +1}. {value}</AnswerList>;
             })}
             <Answer><em>{correctAnswer}</em></Answer>
         </Card>
