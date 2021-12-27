@@ -1,4 +1,4 @@
-export interface Question {
+export interface QuestionData {
     id: number,
     question: string,
     possibleAnswers: [string],

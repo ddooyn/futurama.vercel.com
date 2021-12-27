@@ -1,22 +1,54 @@
 import type { NextPage } from 'next'
-import axios from 'axios';
-import useSWR from 'swr';
-
-const fetcher = (url: string) => axios(url).then((res) => res.data);
+import { InventoryContainer } from '../../components/InventoryContainer'
+import styled from '@emotion/styled';
 
 const InventoryIndexPage: NextPage = () => {
-    const { data, error } = useSWR('https://api.sampleapis.com/futurama/inventory', fetcher);
 
-    console.log(data);
-
-    if (error) return <div>An error💥 has occurred.</div>;
-    if (!data) return <div>Loading...💫</div>;
-
-    return (
-        <div>
-
-        </div>
-    )
+  return (
+    <div>
+      <Header>
+        <a href="/"><Logo src="img/logo.png" alt='퓨처라마 소개 메인'/></a>
+        <Menu>
+          <li><a href="./characters">characters</a></li>
+          <li><a href="./cast">cast</a></li>
+          <li><a href="./episodes">episodes</a></li>
+          <li><a href="./questions">questions</a></li>
+          <Now><a href="./inventory">inventory</a></Now>
+        </Menu>
+      </Header>
+      <h1>Inventory</h1>
+      <InventoryContainer />
+    </div>
+  )
 }
+
+const Header = styled.header`
+    display: flex;
+    margin-bottom: 3em;
+    padding: 0 3em;
+    background-color: #333;
+    color: #eee;
+`
+
+const Menu = styled.ul`
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    list-style: none;
+    li {
+    margin: 0 2em;
+}
+`
+
+const Logo = styled.img`
+  display: inline-block;
+  width: 250px;
+  object-fit: contain;
+`
+
+const Now = styled.li`
+  font-weight: bold;
+  color: #F2CF66;
+`
 
 export default InventoryIndexPage
