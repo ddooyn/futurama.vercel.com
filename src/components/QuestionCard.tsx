@@ -5,7 +5,7 @@ interface QuestionCardProps {
     questionData: QuestionData
 }
 
-export const QuestionCard = ( {questionData }: QuestionCardProps) => {
+export const QuestionCard = ( { questionData }: QuestionCardProps) => {
     const { id, question, possibleAnswers, correctAnswer } = questionData;
 
     return (

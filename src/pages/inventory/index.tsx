@@ -1,19 +1,20 @@
 import type { NextPage } from 'next'
 import { InventoryContainer } from '../../components/InventoryContainer'
 import styled from '@emotion/styled';
+import Link from 'next/link'
 
 const InventoryIndexPage: NextPage = () => {
 
   return (
     <div>
       <Header>
-        <a href="/"><Logo src="img/logo.png" alt='퓨처라마 소개 메인'/></a>
+        <Link href="/"><a><Logo src="img/logo.png" alt='퓨처라마 소개 메인'/></a></Link>
         <Menu>
-          <li><a href="./characters">characters</a></li>
-          <li><a href="./cast">cast</a></li>
-          <li><a href="./episodes">episodes</a></li>
-          <li><a href="./questions">questions</a></li>
-          <Now><a href="./inventory">inventory</a></Now>
+          <li><Link href="/characters"><a>characters</a></Link></li>
+          <li><Link href="/cast"><a>cast</a></Link></li>
+          <li><Link href="/episodes"><a>episodes</a></Link></li>
+          <li><Link href="/questions"><a>questions</a></Link></li>
+          <Now><Link href="/inventory"><a>inventory</a></Link></Now>
         </Menu>
       </Header>
       <h1>Inventory</h1>
