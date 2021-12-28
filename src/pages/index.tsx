@@ -61,7 +61,7 @@ const Menu = styled.ul`
   margin-left: auto;
   list-style: none;
   li {
-    margin: 0 2em;
+    margin: 0 10px;
   }
 `
 

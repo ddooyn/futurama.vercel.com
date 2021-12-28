@@ -30,6 +30,8 @@ const Container = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 30px 10px;
+    margin: 2em auto;
     padding: 5vw;
+    max-width: 1200px;
     text-align: center;
 `

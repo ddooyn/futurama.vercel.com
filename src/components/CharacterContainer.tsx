@@ -28,6 +28,8 @@ const Container = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     grid-auto-rows: minmax(500px, auto);
     gap: 10px;
+    margin: 2em auto;
     padding-left: 2em;
+    max-width: 1480px;
     text-align: center;
 `

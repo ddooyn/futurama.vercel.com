@@ -27,7 +27,8 @@ const Container = styled.div`
     position: block;
     display: flex;
     flex-direction: column;
-    margin: 2em;
+    margin: 2em auto;
     padding: 2em;
+    max-width: 1000px;
     text-align: center;
 `

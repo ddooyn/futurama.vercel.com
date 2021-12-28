@@ -41,7 +41,7 @@ const Question = styled.strong`
 
 const AnswerList = styled.p`
     display: flex;
-    margin: 0 2em;
+    margin: 0 10vw;
     line-height: 1.4em;
 `
 
